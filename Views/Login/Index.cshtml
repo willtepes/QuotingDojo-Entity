@@ -1,0 +1,20 @@
+<h3>Register as a new user</h3>
+@model quotingdojo3.Models.RegisterViewModel
+<form asp-controller="Login" asp-action="register" method="post" role="form">
+    <div style="color:red" asp-validation-summary="All"></div>
+    <div style="color:red">@ViewBag.ManualError</div>
+    First Name:         <input asp-for="first_name"/><br>
+    Last Name:          <input asp-for="last_name"/><br>
+    Email:              <input asp-for="email"/><br>
+    Password:           <input asp-for="password"/><br>
+    Confirm Password:   <input asp-for="confirm_password"/><br>
+    <button type="submit">Register</button>
+</form>
+
+
+<h3>Current user login</h3>
+<form action="login" method="post">
+    Email:   <input type="text" name="login_email"><br>
+    Password:<input type="text" name="login_password"><br>
+    <button type="submit">Login</button>
+</form>

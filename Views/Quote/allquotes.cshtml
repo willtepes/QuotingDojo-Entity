@@ -1,0 +1,6 @@
+<h1>Here are the awesome quotes!</h1>
+@model IEnumerable<quotingdojo3.Models.Quote>
+@foreach ( var quote in Model )
+{
+ <p>@quote.user.first_name - @quote.quote - @quote.created_at.ToString(" h:mm tt, MMMM dd, yyyy")</p> if(@ViewBag.UserID == @quote.userid){<button><a href="delete/@quote.id">Delete</a></button>}
+} 
